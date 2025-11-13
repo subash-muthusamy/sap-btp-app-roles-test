@@ -1,0 +1,44 @@
+{
+  "xsappname": "sap-btp-app-roles-test",
+  "tenant-mode": "shared",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "Display (read) access"
+    },
+    {
+      "name": "$XSAPPNAME.Editor",
+      "description": "Edit (write) access"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Administrative access"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Display",
+      "description": "Can view resources",
+      "scope-references": [
+        "$XSAPPNAME.Display"
+      ]
+    },
+    {
+      "name": "Editor",
+      "description": "Can view and edit resources",
+      "scope-references": [
+        "$XSAPPNAME.Display",
+        "$XSAPPNAME.Editor"
+      ]
+    },
+    {
+      "name": "Administrator",
+      "description": "Full administrative access",
+      "scope-references": [
+        "$XSAPPNAME.Display",
+        "$XSAPPNAME.Editor",
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ]
+}

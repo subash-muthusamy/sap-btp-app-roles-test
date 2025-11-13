@@ -1,0 +1,16 @@
+{
+  "name": "sap-btp-app-roles-test",
+  "version": "1.0.0",
+  "description": "Demo app to show xs-security.json roles and scopes in SAP BTP (Cloud Foundry)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
+  }
+}

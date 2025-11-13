@@ -1,0 +1,13 @@
+---
+applications:
+- name: sap-btp-app-roles-test
+  memory: 128M
+  buildpacks:
+    - nodejs_buildpack
+  path: .
+  instances: 1
+  # Optionally add a route or remove to let CF auto-create one
+  # routes:
+  #   - route: sap-btp-app-roles-test-<your-domain>
+  services:
+    - my-xsuaa
